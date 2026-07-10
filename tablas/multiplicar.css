@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  font-family: "Nunito", system-ui, Arial, sans-serif;
+  background: linear-gradient(135deg, #5b6cf0, #9d6bff);
+}
+
+.tarjeta {
+  background: #ffffff;
+  width: 100%;
+  max-width: 640px;
+  border-radius: 22px;
+  padding: 30px 28px 20px;
+  box-shadow: 0 20px 50px rgba(30, 20, 80, 0.35);
+  text-align: center;
+}
+
+h1 {
+  font-family: "Fredoka", "Nunito", sans-serif;
+  color: #4b3fca;
+  margin: 0 0 6px;
+  font-size: 30px;
+}
+
+.instruccion {
+  color: #6a6a7a;
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+
+.controles {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+#txtNumero {
+  width: 240px;
+  padding: 13px 18px;
+  border: 2px solid #e6e2f7;
+  border-radius: 14px;
+  font-size: 16px;
+  text-align: center;
+  color: #4b3fca;
+  font-weight: bold;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#txtNumero::placeholder { color: #b7b2cf; font-weight: normal; }
+
+#txtNumero:focus {
+  border-color: #7b5cff;
+  box-shadow: 0 0 0 4px rgba(123, 92, 255, 0.2);
+}
+
+.btn {
+  background: #ffb038;
+  color: #5a3d00;
+  border: none;
+  padding: 13px 28px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255, 176, 56, 0.5);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.btn:hover { background: #ffa01a; transform: translateY(-2px); box-shadow: 0 12px 22px rgba(255, 176, 56, 0.55); }
+.btn:active { transform: translateY(0); }
+
+.tabla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.fila {
+  background: #f3f1ff;
+  color: #4b3fca;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 16px 10px;
+  border-radius: 14px;
+  border: 2px solid #ece8ff;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.fila:hover {
+  transform: scale(1.05);
+  background: #7b5cff;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(123, 92, 255, 0.4);
+}
+
+.aviso {
+  grid-column: 1 / -1;
+  color: #7b5cff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.pie {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid #eee;
+  color: #9a95ad;
+  font-size: 13px;
+}
+
+/* TABLET */
+@media (max-width: 640px) {
+  .tabla { grid-template-columns: repeat(2, 1fr); }
+  h1 { font-size: 26px; }
+}
+
+/* CELULAR */
+@media (max-width: 400px) {
+  .tabla { grid-template-columns: 1fr; }
+  #txtNumero, .btn { width: 100%; }
+}
