@@ -3,6 +3,10 @@ function generarTablas(){
     let contenedor = document.getElementById("tabla");
     let numero = parseInt(document.getElementById("txtNumero").value);
  
+    for(let i = 1; i <= 12; i++){
+        contenido = contenido + "<div class='fila'>" + numero + " × " + i + " = " + "</div>";
+    }
+
     contenedor.innerHTML = contenido;
 }
  
